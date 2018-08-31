@@ -3,11 +3,10 @@ from flask import Flask
 from blueapp.blueview import blue
 
 app = Flask(__name__)
-# app.register_blueprint(blueprint=blue,url_prefix="/myblue")
 app.register_blueprint(blueprint=blue)
 
 app.config['secret_key'] = '123456'
-# app.secret_key = '123456'
+
 manager = Manager(app)
 
 
